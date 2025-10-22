@@ -12,7 +12,9 @@ export type Opaque<T, K> = T & { __opaque__: K };
 export type IntegerNumber = Opaque<number, 'Int'>;
 
 /** Opqaue tyep for floatnumber */
-export type FloatNumber = Opaque<numbeexport type LavaSrcSearchPlatformBase =
+export type FloatNumber = Opaque<number, 'Float'>;
+
+export type LavaSrcSearchPlatformBase =
     "spsearch" |
     "sprec" |
     "amsearch" |
@@ -32,9 +34,7 @@ export type FloatNumber = Opaque<numbeexport type LavaSrcSearchPlatformBase =
     "pdisrc" |
     "pdrec" |
     "gnsearch" |
-    "gnrec";h" |
-    "pdisrc" |
-    "pdrec";
+    "gnrec";
 export type LavaSrcSearchPlatform = LavaSrcSearchPlatformBase | "ftts";
 
 export type JioSaavnSearchPlatform = "jssearch" | "jsrec";
@@ -58,7 +58,9 @@ export type LavalinkSearchPlatform = "ytsearch" |
     JioSaavnSearchPlatform |
     LavalinkClientSearchPlatform;
 
-export type ClientCustomSearchPlatformUtils = "localexport type ClientSearchPlatform =
+export type ClientCustomSearchPlatformUtils = "local" | "http" | "https" | "link" | "uri";
+
+export type ClientSearchPlatform =
     ClientCustomSearchPlatformUtils | // for file/link requests
     "youtube" | "yt" |
     "youtube music" | "youtubemusic" | "ytm" | "musicyoutube" | "music youtube" |
@@ -69,9 +71,11 @@ export type ClientCustomSearchPlatformUtils = "localexport type ClientSearchPlat
     "yandex" | "yandex music" | "yandexmusic" | "vk" | "vk music" | "vkmusic" | "tidal" | "tidal music" | "qobuz" |
     "pandora" | "pd" | "pandora music" | "pandoramusic" |
     "gaana" | "gn" | "gaana music" | "gaanamusic" |
-    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";form | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";
+    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";
 
-export type SearchPlatform = Lavaliexport type SourcesRegex = "YoutubeRegex" |
+export type SearchPlatform = LavalinkSearchPlatform | ClientSearchPlatform;
+
+export type SourcesRegex = "YoutubeRegex" |
     "YoutubeMusicRegex" |
     "SoundCloudRegex" |
     "SoundCloudMobileRegex" |
@@ -112,9 +116,6 @@ export type SearchPlatform = Lavaliexport type SourcesRegex = "YoutubeRegex" |
     "PandoraPlaylistRegex" |
     "AllPandoraRegex" |
     "gaana" |
-    "TwitchTv" |
-    "vimeo";    "PandoraPlaylistRegex" |
-    "AllPandoraRegex" |
     "TwitchTv" |
     "vimeo";
 
