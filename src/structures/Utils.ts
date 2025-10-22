@@ -305,17 +305,16 @@ export class ManagerUtils {
             throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'yandexmusic' enabled");
         }
         if (SourceLinksRegexes.jiosaavn.test(queryString) && !node.info?.sourceManagers?.includes("jiosaavn")) {
-            throw new Error("Query / Link Provided for this Source bu        if (SourceLinksRegexes.AllPandoraRegex.test(queryString) && !node.info?.sourceManagers?.includes("pandora")) {
+            throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'jiosaavn' (via jiosaavn-plugin) enabled");
+        }
+        if (SourceLinksRegexes.tidal.test(queryString) && !node.info?.sourceManagers?.includes("tidal")) {
+            throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'tidal' enabled");
+        }
+        if (SourceLinksRegexes.AllPandoraRegex.test(queryString) && !node.info?.sourceManagers?.includes("pandora")) {
             throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'pandora' enabled");
         }
         if (SourceLinksRegexes.gaana.test(queryString) && !node.info?.sourceManagers?.includes("gaana")) {
             throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'gaana' enabled");
-        }
-        return;
-    }ink Node has not 'tidal' enabled");
-        }
-        if (SourceLinksRegexes.AllPandoraRegex.test(queryString) && !node.info?.sourceManagers?.includes("pandora")) {
-            throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'pandora' enabled");
         }
         return;
     }
@@ -413,20 +412,18 @@ export class ManagerUtils {
         }
         if (source === "qbsearch" && !node.info?.sourceManagers?.includes("qobuz")) {
             throw new Error("Lavalink Node has not 'qobuz' enabled, which is required to have 'qbsearch' work");
-        }        if (["pdsearch", "pdisrc", "pdrec"].includes(source) && !node.info?.sourceManagers?.includes("pandora")) {
-    throw new Error("Lavalink Node has not 'pandora' enabled, which is required to have '" + source + "' work");
         }
-        if (["gnsearch", "gnrec"].includes(source) && !node.info?.sourceManagers?.includes("gaana")) {
-            throw new Error("Lavalink Node has not 'gaana' enabled, which is required to have '" + source + "' work");
+        if (source === "qbisrc" && !node.info?.sourceManagers?.includes("qobuz")) {
+            throw new Error("Lavalink Node has not 'qobuz' enabled, which is required to have 'qbisrc' work");
         }
-
-        return;
-    }
-}anagers?.includes("qobuz")) {
+        if (source === "qbrec" && !node.info?.sourceManagers?.includes("qobuz")) {
             throw new Error("Lavalink Node has not 'qobuz' enabled, which is required to have 'qbrec' work");
         }
         if (["pdsearch", "pdisrc", "pdrec"].includes(source) && !node.info?.sourceManagers?.includes("pandora")) {
-    throw new Error("Lavalink Node has not 'pandora' enabled, which is required to have '" + source + "' work");
+            throw new Error("Lavalink Node has not 'pandora' enabled, which is required to have '" + source + "' work");
+        }
+        if (["gnsearch", "gnrec"].includes(source) && !node.info?.sourceManagers?.includes("gaana")) {
+            throw new Error("Lavalink Node has not 'gaana' enabled, which is required to have '" + source + "' work");
         }
 
         return;
