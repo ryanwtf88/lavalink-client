@@ -70,7 +70,6 @@ export const DefaultSources: Record<SearchPlatform, LavalinkSearchPlatform | Cli
     "gaana": "gnsearch",
     "gn": "gnsearch",
     "gnsearch": "gnsearch",
-    "gnisrc": "gnisrc",
     "gnrec": "gnrec",
     "gaana music": "gnsearch",
     "gaanamusic": "gnsearch",
@@ -184,3 +183,4 @@ export const SourceLinksRegexes: Record<SourcesRegex, RegExp> = {
     musicYandex: /https:\/\/music\.yandex\.ru\//,
     radiohost: /https?:\/\/[^.\s]+\.radiohost\.de\/(\S+)/,
 }
+
