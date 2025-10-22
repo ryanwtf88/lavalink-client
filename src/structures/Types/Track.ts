@@ -3,9 +3,8 @@ import type { anyObject } from "./Player";
 import type { Base64 } from "./Utils";
 
 /** Sourcenames provided by lavalink server */
-export type LavalinkSourceNames = "youtube" | "youtubemusic" | "soundcloud" | "bandcamp" | "twitch";
-/** Source Names provided by lava src plugin */
-export type LavalinkPlugin_LavaSrc_SourceNames = "deezer" | "spotify" | "applemusic" | "yandexmusic" | "flowery-tts" | "vkmusic" | "tidal" | "qobuz" | "pandora";
+export type LavalinkSourceNames = "youtube" | "youtubemusic" | "soundcloud" | "bandcamp" | "twit/** Source Names provided by lava src plugin */
+export type LavalinkPlugin_LavaSrc_SourceNames = "deezer" | "spotify" | "applemusic" | "yandexmusic" | "flowery-tts" | "vkmusic" | "tidal" | "qobuz" | "pandora" | "gaana";ndora";
 /** Source Names provided by jiosaavan plugin */
 export type LavalinkPlugin_JioSaavn_SourceNames = "jiosaavn";
 /** The SourceNames provided by lavalink */

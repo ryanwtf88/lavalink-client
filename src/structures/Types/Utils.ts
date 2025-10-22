@@ -12,9 +12,7 @@ export type Opaque<T, K> = T & { __opaque__: K };
 export type IntegerNumber = Opaque<number, 'Int'>;
 
 /** Opqaue tyep for floatnumber */
-export type FloatNumber = Opaque<number, 'Float'>;
-
-export type LavaSrcSearchPlatformBase =
+export type FloatNumber = Opaque<numbeexport type LavaSrcSearchPlatformBase =
     "spsearch" |
     "sprec" |
     "amsearch" |
@@ -31,6 +29,10 @@ export type LavaSrcSearchPlatformBase =
     "qbisrc" |
     "qbrec" |
     "pdsearch" |
+    "pdisrc" |
+    "pdrec" |
+    "gnsearch" |
+    "gnrec";h" |
     "pdisrc" |
     "pdrec";
 export type LavaSrcSearchPlatform = LavaSrcSearchPlatformBase | "ftts";
@@ -56,9 +58,7 @@ export type LavalinkSearchPlatform = "ytsearch" |
     JioSaavnSearchPlatform |
     LavalinkClientSearchPlatform;
 
-export type ClientCustomSearchPlatformUtils = "local" | "http" | "https" | "link" | "uri";
-
-export type ClientSearchPlatform =
+export type ClientCustomSearchPlatformUtils = "localexport type ClientSearchPlatform =
     ClientCustomSearchPlatformUtils | // for file/link requests
     "youtube" | "yt" |
     "youtube music" | "youtubemusic" | "ytm" | "musicyoutube" | "music youtube" |
@@ -68,11 +68,10 @@ export type ClientSearchPlatform =
     "dz" | "deezer" |
     "yandex" | "yandex music" | "yandexmusic" | "vk" | "vk music" | "vkmusic" | "tidal" | "tidal music" | "qobuz" |
     "pandora" | "pd" | "pandora music" | "pandoramusic" |
-    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";
+    "gaana" | "gn" | "gaana music" | "gaanamusic" |
+    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";form | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";
 
-export type SearchPlatform = LavalinkSearchPlatform | ClientSearchPlatform;
-
-export type SourcesRegex = "YoutubeRegex" |
+export type SearchPlatform = Lavaliexport type SourcesRegex = "YoutubeRegex" |
     "YoutubeMusicRegex" |
     "SoundCloudRegex" |
     "SoundCloudMobileRegex" |
@@ -111,6 +110,10 @@ export type SourcesRegex = "YoutubeRegex" |
     "PandoraAlbumRegex" |
     "PandoraArtistRegex" |
     "PandoraPlaylistRegex" |
+    "AllPandoraRegex" |
+    "gaana" |
+    "TwitchTv" |
+    "vimeo";    "PandoraPlaylistRegex" |
     "AllPandoraRegex" |
     "TwitchTv" |
     "vimeo";

@@ -55,16 +55,22 @@ export const DefaultSources: Record<SearchPlatform, LavalinkSearchPlatform | Cli
     "vk": "vksearch",
     // Qobuz (lavasrc)
     "qbsearch": "qbsearch",
-    "qobuz": "qbsearch",
-    "qbisrc": "qbisrc",
-    "qbrec": "qbrec",
-    // pandora (lavasrc)
+    "qobuz": "    // pandora (lavasrc)
     "pandora": "pdsearch",
     "pd": "pdsearch",
     "pdsearch": "pdsearch",
     "pdisrc": "pdisrc",
     "pdrec": "pdrec",
     "pandora music": "pdsearch",
+    "pandoramusic": "pdsearch",
+    // gaana (lavasrc)
+    "gaana": "gnsearch",
+    "gn": "gnsearch",
+    "gnsearch": "gnsearch",
+    "gnrec": "gnrec",
+    "gaana music": "gnsearch",
+    "gaanamusic": "gnsearch",
+    // speak PLUGIN": "pdsearch",
     "pandoramusic": "pdsearch",
     // speak PLUGIN
     "speak": "speak",
@@ -155,17 +161,17 @@ export const SourceLinksRegexes: Record<SourcesRegex, RegExp> = {
     appleMusic: /https?:\/\/?(?:www\.)?music\.apple\.com\/(\S+)/,
 
     /** From tidal */
-    tidal: /https?:\/\/?(?:www\.)?(?:tidal|listen)\.tidal\.com\/(?<type>track|album|playlist|artist)\/(?<identifier>[a-zA-Z0-9-_]+)/,
-
-    /** From jiosaavn-plugin */
-    jiosaavn: /(https?:\/\/)(www\.)?jiosaavn\.com\/(?<type>song|album|featured|artist)\/([a-zA-Z0-9-_/,]+)/,
-
-    /** From pandora */
+    tidal: /https?:\/\/?(?:www\.)?(?:tidal|listen)\.tidal\.com\/(?<type>track|album|playlist|artist)\/(?<identifier>[a-zA-Z0-9-_]    /** From pandora */
     PandoraTrackRegex: /^@?(?:https?:\/\/)?(?:www\.)?pandora\.com\/artist\/[\w\-]+(?:\/[\w\-]+)*\/(?<identifier>TR[A-Za-z0-9]+)(?:[?#].*)?$/,
     PandoraAlbumRegex: /^@?(?:https?:\/\/)?(?:www\.)?pandora\.com\/artist\/[\w\-]+(?:\/[\w\-]+)*\/(?<identifier>AL[A-Za-z0-9]+)(?:[?#].*)?$/,
     PandoraArtistRegex: /^@?(?:https?:\/\/)?(?:www\.)?pandora\.com\/artist\/[\w\-]+\/(?<identifier>AR[A-Za-z0-9]+)(?:[?#].*)?$/,
     PandoraPlaylistRegex: /^@?(?:https?:\/\/)?(?:www\.)?pandora\.com\/playlist\/(?<identifier>PL:[\d:]+)(?:[?#].*)?$/,
     AllPandoraRegex: /^@?(?:https?:\/\/)?(?:www\.)?pandora\.com\/(?:playlist\/(?<playlistId>PL:[\d:]+)|artist\/[\w\-]+(?:\/[\w\-]+)*\/(?<identifier>(?:TR|AL|AR)[A-Za-z0-9]+))(?:[?#].*)?$/,
+
+    /** From gaana */
+    gaana: /https:\/\/gaana\.com\/(?<type>song|album|playlist|artist)\/[^/]+(\/(?<id>[^/]+))?/,
+
+    /** FROM DUNCTE BOT PLUGIN */(?:playlist\/(?<playlistId>PL:[\d:]+)|artist\/[\w\-]+(?:\/[\w\-]+)*\/(?<identifier>(?:TR|AL|AR)[A-Za-z0-9]+))(?:[?#].*)?$/,
 
     /** FROM DUNCTE BOT PLUGIN */
     tiktok: /https:\/\/www\.tiktok\.com\//,
