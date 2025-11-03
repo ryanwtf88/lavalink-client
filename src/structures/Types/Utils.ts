@@ -34,7 +34,8 @@ export type LavaSrcSearchPlatformBase =
     "pdisrc" |
     "pdrec" |
     "gnsearch" |
-    "gnrec";
+    "gnrec" |
+    "fmsearch";
 export type LavaSrcSearchPlatform = LavaSrcSearchPlatformBase | "ftts";
 
 export type JioSaavnSearchPlatform = "jssearch" | "jsrec";
@@ -71,7 +72,8 @@ export type ClientSearchPlatform =
     "yandex" | "yandex music" | "yandexmusic" | "vk" | "vk music" | "vkmusic" | "tidal" | "tidal music" | "qobuz" |
     "pandora" | "pd" | "pandora music" | "pandoramusic" |
     "gaana" | "gn" | "gaana music" | "gaanamusic" |
-    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec";
+    "flowerytts" | "flowery" | "flowery.tts" | LavalinkClientSearchPlatformResolve | LavalinkClientSearchPlatform | "js" | "jiosaavn" | "td" | "tidal" | "tdrec" |
+    "lastfm" | "last.fm" | "last-fm" | "fm";
 
 export type SearchPlatform = LavalinkSearchPlatform | ClientSearchPlatform;
 
@@ -117,7 +119,8 @@ export type SourcesRegex = "YoutubeRegex" |
     "AllPandoraRegex" |
     "gaana" |
     "TwitchTv" |
-    "vimeo";
+    "vimeo" |
+    "lastfm";
 
 export interface PlaylistInfo {
     /** The playlist name */

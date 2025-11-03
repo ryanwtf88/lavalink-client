@@ -42,6 +42,7 @@ export enum DebugEvents {
     PlayerPlayUnresolvedTrackFailed = "PlayerPlayUnresolvedTrackFailed",
     PlayerVolumeAsFilter = "PlayerVolumeAsFilter",
     BandcampSearchLokalEngine = "BandcampSearchLokalEngine",
+    LastFmSearchLokalEngine = "LastFmSearchLokalEngine",
     PlayerChangeNode = "PlayerChangeNode",
 
     BuildTrackError = "BuildTrackError",

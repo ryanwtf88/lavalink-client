@@ -1,5 +1,6 @@
 import { DebugEvents } from "./Constants";
 import { bandCampSearch } from "./CustomSearches/BandCampSearch";
+import { lastFmSearch } from "./CustomSearches/LastFmSearch";
 import { FilterManager } from "./Filters";
 import { Queue, QueueSaver } from "./Queue";
 import { queueTrackEnd } from "./Utils";
@@ -448,6 +449,17 @@ export class Player {
                 });
             }
             return await bandCampSearch(this, Query.query, requestUser);
+        }
+
+        if (["fmsearch", "lastfm"].includes(Query.source)) {
+            if (this.LavalinkManager.options?.advancedOptions?.enableDebugEvents) {
+                this.LavalinkManager.emit("debug", DebugEvents.LastFmSearchLokalEngine, {
+                    state: "log",
+                    message: `Player.search was called with a Last.fm Query, searching with the custom Search Engine.`,
+                    functionLayer: "Player > search()",
+                });
+            }
+            return await lastFmSearch(this, Query.query, requestUser);
         }
 
         return this.node.search(Query, requestUser, throwOnEmpty);

@@ -105,7 +105,13 @@ export const DefaultSources: Record<SearchPlatform, LavalinkSearchPlatform | Cli
     "jiosaavn": "jssearch",
     "js": "jssearch",
     "jssearch": "jssearch",
-    "jsrec": "jsrec"
+    "jsrec": "jsrec",
+    // last.fm
+    "lastfm": "fmsearch",
+    "last.fm": "fmsearch",
+    "last-fm": "fmsearch",
+    "fm": "fmsearch",
+    "fmsearch": "fmsearch"
 }
 
 /** Lavalink Plugins definiton */
@@ -166,6 +172,9 @@ export const SourceLinksRegexes: Record<SourcesRegex, RegExp> = {
 
     /** From jiosaavn-plugin */
     jiosaavn: /(https?:\/\/)(www\.)?jiosaavn\.com\/(?<type>song|album|featured|artist)\/([a-zA-Z0-9-_/,]+)/,
+
+    /** From last.fm */
+    lastfm: /(https?:\/\/)?(www\.)?last\.fm\/music\/([^/]+)(\/([^/]+)(\/([^/]+))?)?/,
 
     /** From gaana */
     gaana: /https?:\/\/gaana\.com\/(?<type>song|album|playlist|artist)\/[^/]+(?:\/(?<id>[^/]+))?/,
