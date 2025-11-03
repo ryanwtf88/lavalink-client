@@ -316,6 +316,9 @@ export class ManagerUtils {
         if (SourceLinksRegexes.gaana.test(queryString) && !node.info?.sourceManagers?.includes("gaana")) {
             throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'gaana' enabled");
         }
+        if (SourceLinksRegexes.lastfm.test(queryString) && !node.info?.sourceManagers?.includes("lastfm")) {
+            throw new Error("Query / Link Provided for this Source but Lavalink Node has not 'lastfm' enabled");
+        }
         return;
     }
 
@@ -424,6 +427,9 @@ export class ManagerUtils {
         }
         if (["gnsearch", "gnrec"].includes(source) && !node.info?.sourceManagers?.includes("gaana")) {
             throw new Error("Lavalink Node has not 'gaana' enabled, which is required to have '" + source + "' work");
+        }
+        if (source === "fmsearch" && !node.info?.sourceManagers?.includes("lastfm")) {
+            throw new Error("Lavalink Node has not 'lastfm' enabled, which is required to have 'fmsearch' work");
         }
 
         return;
